@@ -54,9 +54,10 @@ class Handler(BaseHandler):
             "website": webside,
            
         }
-	b = a.values()
-        c = sorted(b)
-        result = ",".join(c)
+	a= [response.url,response.doc('title').text(),phone,name,type,address,webside]
+	#b = a.values()
+        #c = sorted(b)
+        result = ",".join(a)
         with open("result.txt","a") as f:
             f.write(result + '\n')
         return result
