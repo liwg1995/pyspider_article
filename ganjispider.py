@@ -43,17 +43,7 @@ class Handler(BaseHandler):
         address = response.doc('a.fc-city').text()  
         #weizhi = response.etree.xpath("*[@class='info f-clear']/li[2]/text()")
         webside = "赶集网"
-        a = {
-            "url": response.url,
-            "title": response.doc('title').text(),
-            "phone": phone,
-            "name": name,
-            "type": type,
-            "address": address,
-            #"weizhi": weizhi,
-            "website": webside,
-           
-        }
+       
 	a= [response.url,response.doc('title').text(),phone,name,type,address,webside]
 	#b = a.values()
         #c = sorted(b)
